@@ -1,12 +1,19 @@
 #best time to buy and sell stocks 
+
 def max_profit(prices)
+  
     min = prices[0]
     max = 0
     sz=prices.length
+   # prices.each do |p|
      for i in 0...sz
-        min = prices[i] if prices[i] < min
+        if prices[i] < min
+            min = prices[i] 
+        end
         temp = prices[i] - min
-        max = temp if temp > max
+        if temp > max
+            max=temp
+        end
     end
     return max
 end
