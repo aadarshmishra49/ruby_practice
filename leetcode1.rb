@@ -1,6 +1,5 @@
 #best time to buy and sell stocks 
 def max_profit(prices)
-  
     min = prices[0]
     max = 0
     sz=prices.length
